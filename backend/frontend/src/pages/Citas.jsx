@@ -42,7 +42,6 @@ const Citas = () => {
     fetchEspecialidades();
   }, []);
 
-  // 2) Cargar horarios disponibles al cambiar especialidad o fecha
   useEffect(() => {
     const fetchHorarios = async () => {
       if (!selectedEspecialidad || !selectedDate) return;
@@ -63,7 +62,7 @@ const Citas = () => {
     fetchHorarios();
   }, [selectedEspecialidad, selectedDate]);
 
-  // 3) Manejar el envío del formulario
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
